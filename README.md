@@ -301,7 +301,7 @@ Et voilà le travail !!
 
 Pour finir sur ce petit récap je me suis vraiment éclatée à faire et refaire (quand bien même j'ai bien râlé à la troisième fois…) ce projet. Ca a quand même eu du bon toutes ces histoires de reset de VM parce que du coup je me suis bien familiarisée avec le shell, et même de retour sur le C ça m'est bien utile d'être à l'aise avec la ligne de commande. 
 
-Je suis aussi contente d'avoir écrit ce résumé car, encore une fois, ça me rendait un peu triste de pas avoir d'autres traces que mon script sur ce projet. J'espère qu'il n'est pas assez exhaustif pour être considéré comme un step-to-step, mais quand même assez détaillé pour être clair et partager un peu de ce que j'ai appris.
+Je suis aussi contente d'avoir écrit ce résumé car, encore une fois, ça me rendait un peu triste de ne pas avoir d'autres traces que mon script sur ce projet. J'espère qu'il n'est pas assez exhaustif pour être considéré comme un step-to-step, mais quand même assez détaillé pour être clair et partager un peu de ce que j'ai appris.
 
 Ok bye !
 
