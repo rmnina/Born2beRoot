@@ -40,7 +40,7 @@ La première chose que j'ai faite, après un petit ****************apt update***
 
 ### 2. 1 - Politique de mots de passe
 
-Le sujet demandait l'instauration d'une **politique de mots de passes forts**. J'ai téléchargé pour cela la librairie **libpam-pwquality** ******************qui me permettait d'instaurer certaines règles absentes du ********pam-unix******** de base. Je l'ai inclue dans un fichier ***/etc/security/pwquality.conf*** et ai configuré les options suivantes :
+Le sujet demandait l'instauration d'une **politique de mots de passes forts**. J'ai téléchargé pour cela la librairie **libpam-pwquality** qui me permettait d'instaurer certaines règles absentes du ********pam-unix******** de base. Je l'ai inclue dans un fichier ***/etc/security/pwquality.conf*** et ai configuré les options suivantes :
 
 ```bash
 difok=7 #le nouveau mdp doit contenir au moins 7 caractères différents de l'ancien
