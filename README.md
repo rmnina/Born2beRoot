@@ -1,6 +1,6 @@
 # Born2beRoot
 
-Born2beRoot est un projet de l'école 42 portant sur la **configuration d'une machine virtuelle**, bien sûr sans GUI (où serait le fun ?). Il permet une immersion assez conséquente le domaine de l'administration système. Dans la mesure où j'ai fait ce projet ************3 FOIS************(une première fois sur mon PC perso, une seconde au propre à l'école et une troisième car ma VM s'est faite supprimer des serveurs de l'école……..), je me suis dit que ça valait bien au moins un petit résumé détaillé.
+Born2beRoot est un projet de l'école 42 portant sur la **configuration d'une machine virtuelle**, bien sûr sans GUI (où serait le fun ?). Il permet une immersion assez conséquente dans le domaine de l'administration système. Dans la mesure où j'ai fait ce projet ************3 FOIS************(une première fois sur mon PC perso, une seconde au propre à l'école et une troisième car ma VM s'est faite supprimer des serveurs de l'école……..), je me suis dit que ça valait bien au moins un petit résumé détaillé.
 
 **!! DISCLAIMER !!**
 
