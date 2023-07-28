@@ -1,6 +1,6 @@
 # Born2beRoot
 
-Born2beRoot est un projet de l'école 42 portant sur la **configuration d'une machine virtuelle**, bien sûr sans GUI (où serait le fun ?). Il permet une immersion assez conséquente le domaine de l'administration système. Dans la mesure où j'ai fait ce projet ************3 FOIS** (une première fois sur mon PC perso, une seconde au propre à l'école et une troisième car ma VM s'est faite supprimer des serveurs de l'école……..), je me suis dit que ça valait bien au moins un petit “write-up”.
+Born2beRoot est un projet de l'école 42 portant sur la **configuration d'une machine virtuelle**, bien sûr sans GUI (où serait le fun ?). Il permet une immersion assez conséquente le domaine de l'administration système. Dans la mesure où j'ai fait ce projet ************3 FOIS************(une première fois sur mon PC perso, une seconde au propre à l'école et une troisième car ma VM s'est faite supprimer des serveurs de l'école……..), je me suis dit que ça valait bien au moins un petit résumé détaillé.
 
 **!! DISCLAIMER !!**
 
@@ -14,7 +14,7 @@ J'ai choisi dans un premier temps de faire tourner ma machine sous ****Debian***
 - Choix du hostname, ici et selon les consignes du projet *jdufour42* (je pourrai le changer plus tard avec la commande suivante) :
 
 ```bash
-sudo hostnamectl set-hostname {NEW_HOSTNAME}
+sudo hostnamectl set-hostname [NEW_HOSTNAME]
 ```
 
 - Mot de passe du super-utilisateur root;
@@ -26,7 +26,7 @@ sudo adduser
 
 - Le partitionnement. Le projet nous demandait de créer une **partition primaire principale**, et une **partition logique chiffrée capable d'accueillir les volumes LVM.**
     - Comme j'ai décidé de faire les bonus, j'ai accordé à ma partition primaire /boot une taille équivalente à celle donnée en exemple du modèle de partitionnement du sujet, soit *500MB*. Je l'ai positionnée au début de mon schéma de partitions et ai défini le /boot comme mountpoint. Elle accueillera ainsi les fichiers statiques du programme de démarrage.
-    - La seconde partition prenait le reste de l'espace libre (****max****) **************et permettait d'accueillir mes volumes chiffrés. Il devait s'agir d'une **********************************partition logique**********************************. Puisque cette partition agissait comme une cloison pour mes volumes logiques et ne contiennait pas de données propres, je ne lui ai pas configuré pas de mountpoint. J'ai ainsi pu aller configurer mes volumes chiffrés dedans :
+    - La seconde partition prenait le reste de l'espace libre et permettait d'accueillir mes volumes chiffrés. Il devait s'agir d'une **********************************partition logique**********************************. Puisque cette partition agissait comme une cloison pour mes volumes logiques et ne contiennait pas de données propres, je ne lui ai pas configuré pas de mountpoint. J'ai ainsi pu aller configurer mes volumes chiffrés dedans :
         - J'ai créé un mot de passe pour le chiffrement de mes volumes ;
         - J'ai configuré un **groupe de volumes LVMGroup** ;
         - J'ai ensuite créé et configuré mes 7 volumes demandés dans la partie bonus : ***/root, /home, /var, /srv, /tmp, /swap et /var/log***. Je leur ai attribué des tailles similaires à celles indiquées comme exemple dans le sujet bonus, et leur ai ensuite attribué les mountpoint correspondants.
@@ -104,7 +104,7 @@ sudo ufw allow [PORT] #autorise le port dont le numéro remplace [PORT]
 sudo ufw status #permet de vérifier la liste des ports autorisés
 ```
 
-Pour le SSH, il y avait une partie un peu plus “tricky” car le port demandé par le sujet était déjà utilisé par l'école (ce qui n'était pas le cas au moment de l'élaboration du sujet), j'ai donc dû faire une redirection depuis mes paramètres virtualbox vers un port inutilisé. Du reste, il me suffisait de télécharger **openssh-server**, et de modifier les lignes suivantes dans le fichier *****************/etc/ssh/sshd_config*** :
+Pour le SSH, il y avait une partie un peu plus “tricky” car le port demandé par le sujet était déjà utilisé par l'école (ce qui n'était pas le cas au moment de l'élaboration du sujet), j'ai donc dû faire une redirection depuis mes paramètres virtualbox vers un port inutilisé. Du reste, il me suffisait de télécharger **openssh-server**, et de modifier les lignes suivantes dans le fichier *****************/etc/ssh/sshd_config***************** :
 
 ```bash
 Port [PORT] #indique au service ssh qu'il doit écouter le port [PORT]
